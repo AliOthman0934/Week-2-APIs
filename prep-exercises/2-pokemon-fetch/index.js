@@ -33,7 +33,7 @@ async function fetchJSON(url) {
     return myDataJson;
 
   }catch (error){
-    throw new Error (`Erroe fetching from the API` + error.message);
+    throw new Error (`Erroe fetching from the API`);
   }
 
 }
@@ -76,7 +76,7 @@ async function main() {
       const pokemonData = await fetchJSON(url);
       renderResults(pokemonData);
     }catch(error){
-      renderError(error.message)
+      renderError(error)
     }
   });
 }
